@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Avnish Ahirwar</ShortName>
+  <Description>Official Website of Avnish Ahirwar - Author, Web Developer & Government Professional</Description>
+  <Tags>Avnish Ahirwar Author Web Developer Portfolio Flight 143</Tags>
+  <Contact>avnishahirwar@zohomail.in</Contact>
+  <Url type="text/html"
+       template="https://www.google.com/search?q={searchTerms}+site:avnishahirwar.github.io/avnish"/>
+  <Image height="32" width="32" type="image/png">
+    https://avnishahirwar.github.io/avnish/favicon-32x32.png
+  </Image>
+  <Developer>Avnish Ahirwar</Developer>
+  <Attribution>Copyright © 2026 Avnish Ahirwar</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Language>en-IN</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>
