@@ -36,6 +36,54 @@
             background-color: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.6;
+            padding-top: 70px; /* Space for fixed sticky header */
+        }
+
+        /* NEW: Fixed Sticky Navigation Bar */
+        .sticky-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 11, 14, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 9999;
+            overflow-x: auto;
+            white-space: nowrap;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            padding: 15px 10px;
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .nav-container {
+                justify-content: flex-start;
+                padding: 15px 20px;
+            }
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 9.5pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-gold);
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
         }
 
         .container {
@@ -75,31 +123,54 @@
             border: 1px solid rgba(212, 175, 55, 0.1);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            scroll-margin-top: 90px; /* Offset to align nicely when scrolled */
         }
 
-        /* 1. Card & Panel Side by Side Grid */
-        .top-row-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
+        /* Introduction Text Style */
+        .intro-text-wrapper {
+            max-width: 850px;
+            margin: 0 auto 50px auto;
+            text-align: center;
+            padding: 0 10px;
         }
 
-        @media (max-width: 900px) {
-            .top-row-grid {
-                grid-template-columns: 1fr;
-            }
+        .intro-text-wrapper p {
+            color: var(--text-light);
+            font-size: 11pt;
+            margin-bottom: 20px;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.8;
         }
 
-        .top-row-grid section {
-            margin-bottom: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .intro-panel-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold-gradient);
+            color: black;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 15px;
+            text-transform: uppercase;
+            font-size: 10pt;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
         }
 
-        /* Digital Visiting Card */
+        .intro-panel-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Digital Visiting Card Box Modified to Full Width */
+        .full-width-section {
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+        }
+
         .vcard {
             background: linear-gradient(135deg, rgba(22,22,31,1) 0%, rgba(35,35,49,1) 100%);
             border-radius: 15px;
@@ -108,7 +179,6 @@
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
             position: relative;
             overflow: hidden;
-            flex-grow: 1;
         }
 
         .vcard-profile-img {
@@ -165,21 +235,7 @@
         }
         .share-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); }
 
-        /* Panel Box Layout styling adjustment */
-        .panel-box-content {
-            text-align: center; 
-            padding: 30px 15px; 
-            background: rgba(0,0,0,0.3); 
-            border-radius: 10px; 
-            border: 1px dashed rgba(212, 175, 55, 0.3);
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* 2. Photo Gallery */
+        /* Photo Gallery */
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -196,7 +252,7 @@
         .photo-box img { width: 100%; height: 230px; object-fit: cover; }
         .photo-title { padding: 12px; text-align: center; font-weight: 600; background: #111; font-size: 11pt; border-top: 1px solid rgba(212, 175, 55, 0.1); }
 
-        /* 3. Connect & Newsletter Combined Row */
+        /* Connect & Newsletter Combined Row */
         .connect-newsletter-box {
             display: flex;
             flex-direction: column;
@@ -294,12 +350,36 @@
 </head>
 <body>
 
+    <!-- NEW: Sticky Header Menu Bar -->
+    <nav class="sticky-navbar">
+        <div class="nav-container">
+            <a href="#visiting-card" class="nav-link">My Digital Visiting Card</a>
+            <a href="#gallery" class="nav-link">Photo Gallery</a>
+            <a href="#connect-newsletter" class="nav-link">Connect & Subscribe</a>
+            <a href="#contact-form" class="nav-link">Get In Touch</a>
+            <a href="#book-store" class="nav-link">My Bestselling Book</a>
+            <a href="#tools" class="nav-link">Smart Utilities Tools</a>
+            <a href="#google-reviews" class="nav-link">Customer Reviews</a>
+        </div>
+    </nav>
+
     <div class="container">
 
-        <!-- STEP 1 & 2: Grid Container for Card and Knowledge Panel -->
-        <div class="top-row-grid">
+        <!-- Introduction Text Section (Without Box) placed at the very top -->
+        <div class="intro-text-wrapper">
+            <p>My name is Avnish Ahirwar. I am an author, working professional, and web developer with a passion for innovation, technology, and continuous learning.</p>
+            <p>I am the author of the book Flight 143: Khaufnak Pal, reflecting my interest in storytelling and creative writing. Alongside my professional career, I enjoy designing modern websites and exploring digital solutions that combine creativity with functionality.</p>
+            <p>Currently, I am based in Bhopal, Madhya Pradesh, and serve at the Chief Minister's Office, Government of Madhya Pradesh. My primary responsibility is managing the online registration and application processing under the Chief Minister's Voluntary Grant Scheme, ensuring efficient and accurate service delivery.</p>
+            <p>Beyond my professional life, I have a strong passion for traveling, discovering new destinations, and experiencing royal heritage, luxury lifestyles, and premium architecture. I believe that exploring different cultures and environments broadens perspective and inspires growth.</p>
+            <p>My long-term vision is to become a successful entrepreneur by building my own company into a high-growth enterprise with a multi-crore turnover. I am committed to continuous self-improvement, leadership, innovation, and creating meaningful value through business and technology.</p>
             
-            <!-- 1. My Digital Visiting Card -->
+            <a href="https://share.google/TpNKOjaFZUmWsGOFG" target="_blank" class="intro-panel-btn">
+                <i class="fab fa-google"></i> Google Knowledge Panel
+            </a>
+        </div>
+
+        <!-- 1. My Digital Visiting Card (Section Modified to Full Width Center Layout) -->
+        <div class="full-width-section">
             <section id="visiting-card">
                 <h2>My Digital Visiting Card</h2>
                 <div class="vcard">
@@ -321,24 +401,9 @@
                     <button class="share-btn" onclick="shareVisitingCard()"><i class="fas fa-share-alt"></i> Share Card</button>
                 </div>
             </section>
-
-            <!-- 2. Google Knowledge Panel -->
-            <section id="knowledge-panel">
-                <h2>Google Knowledge Panel</h2>
-                <div class="panel-box-content">
-                    <i class="fab fa-google" style="font-size: 36pt; color: var(--primary-gold); margin-bottom: 15px;"></i>
-                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 10.5pt; max-width: 400px;">
-                        Click below to look up my verified public information profile & index card panel directly via Google Search network.
-                    </p>
-                    <a href="https://share.google/TpNKOjaFZUmWsGOFG" target="_blank" class="submit-btn" style="text-decoration: none;">
-                        <i class="fas fa-external-link-alt"></i> View Official Panel
-                    </a>
-                </div>
-            </section>
-            
         </div>
 
-        <!-- STEP 3: Photo Gallery -->
+        <!-- 2. Photo Gallery -->
         <section id="gallery">
             <h2>Photo Gallery</h2>
             <div class="photo-grid">
@@ -369,11 +434,10 @@
             </div>
         </section>
 
-        <!-- STEP 4: Connect With Me & Subscribe Newsletter (Combined Layout) -->
+        <!-- 3. Connect With Me & Subscribe Newsletter -->
         <section id="connect-newsletter">
             <h2>Connect & Subscribe</h2>
             <div class="connect-newsletter-box">
-                <!-- Social Media Icons Row -->
                 <div class="social-icons-container">
                     <a href="https://www.instagram.com/avnish_ahirwar" class="social-icon-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/avnishahirwar415" class="social-icon-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -382,7 +446,6 @@
                     <a href="https://avnishahirwar415.blogspot.com" class="social-icon-link" target="_blank"><i class="fas fa-blog"></i></a>
                 </div>
                 
-                <!-- Compact Newsletter System Form Row underneath -->
                 <form action="https://formspree.io/f/xyyaqwrq" method="POST" class="inline-newsletter">
                     <input type="email" name="email" placeholder="Enter Your Email ID" required>
                     <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
@@ -390,7 +453,7 @@
             </div>
         </section>
 
-        <!-- STEP 5: Get In Touch (Contact Form) -->
+        <!-- 4. Get In Touch -->
         <section id="contact-form">
             <h2>Get In Touch</h2>
             <div class="form-layout">
@@ -412,7 +475,7 @@
             </div>
         </section>
 
-        <!-- STEP 6: My Bestselling Book -->
+        <!-- 5. My Bestselling Book -->
         <section id="book-store">
             <h2>My Bestselling Book</h2>
             <div class="book-container">
@@ -436,7 +499,7 @@
             </div>
         </section>
 
-        <!-- STEP 7: Smart Utilities Tools -->
+        <!-- 6. Smart Utilities Tools -->
         <section id="tools">
             <h2>Smart Utilities Tools</h2>
             <div class="tools-grid">
@@ -462,7 +525,7 @@
             </div>
         </section>
 
-        <!-- STEP 8: Customer Reviews -->
+        <!-- 7. Customer Reviews -->
         <section id="google-reviews">
             <h2>Customer Reviews</h2>
             <div style="text-align: center; padding: 40px 20px; background: rgba(0, 0, 0, 0.3); border-radius: 12px; border: 1px dashed rgba(212, 175, 55, 0.3);">
@@ -485,7 +548,6 @@
     <div class="toast" id="shareToast">Link Copied to Clipboard!</div>
 
     <script>
-        // Implemented fully robust dynamic sharing handler
         function shareVisitingCard() {
             const currentUrl = window.location.href;
             const toast = document.getElementById('shareToast');
