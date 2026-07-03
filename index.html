@@ -36,10 +36,10 @@
             background-color: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.6;
-            padding-top: 70px; /* Space for fixed sticky header */
+            padding-top: 70px;
         }
 
-        /* NEW: Fixed Sticky Navigation Bar */
+        /* Fixed Sticky Navigation Bar */
         .sticky-navbar {
             position: fixed;
             top: 0;
@@ -123,10 +123,9 @@
             border: 1px solid rgba(212, 175, 55, 0.1);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            scroll-margin-top: 90px; /* Offset to align nicely when scrolled */
+            scroll-margin-top: 90px;
         }
 
-        /* Introduction Text Style */
         .intro-text-wrapper {
             max-width: 850px;
             margin: 0 auto 50px auto;
@@ -165,7 +164,6 @@
             box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
         }
 
-        /* Digital Visiting Card Box Modified to Full Width */
         .full-width-section {
             max-width: 650px;
             margin: 0 auto 40px auto;
@@ -252,7 +250,7 @@
         .photo-box img { width: 100%; height: 230px; object-fit: cover; }
         .photo-title { padding: 12px; text-align: center; font-weight: 600; background: #111; font-size: 11pt; border-top: 1px solid rgba(212, 175, 55, 0.1); }
 
-        /* Connect & Newsletter Combined Row */
+        /* Connect & Newsletter */
         .connect-newsletter-box {
             display: flex;
             flex-direction: column;
@@ -273,7 +271,6 @@
         }
         .social-icon-link:hover { color: #000; background: var(--gold-gradient); transform: scale(1.1); box-shadow: 0 0 10px var(--primary-gold); }
         
-        /* Inline Newsletter Form styling */
         .inline-newsletter {
             width: 100%;
             max-width: 550px;
@@ -311,7 +308,7 @@
         /* Forms Layout */
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; color: var(--light-gold); font-size: 10pt; text-transform: uppercase; letter-spacing: 1px; }
-        input[type="text"], input[type="tel"], textarea {
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
             width: 100%; padding: 12px 15px; background: rgba(0,0,0,0.5);
             border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 8px; color: white; font-size: 11pt;
         }
@@ -350,7 +347,7 @@
 </head>
 <body>
 
-    <!-- NEW: Sticky Header Menu Bar -->
+    <!-- Sticky Header Menu Bar -->
     <nav class="sticky-navbar">
         <div class="nav-container">
             <a href="#visiting-card" class="nav-link">My Digital Visiting Card</a>
@@ -365,7 +362,7 @@
 
     <div class="container">
 
-        <!-- Introduction Text Section (Without Box) placed at the very top -->
+        <!-- Introduction Text Section -->
         <div class="intro-text-wrapper">
             <p>My name is Avnish Ahirwar. I am an author, working professional, and web developer with a passion for innovation, technology, and continuous learning.</p>
             <p>I am the author of the book Flight 143: Khaufnak Pal, reflecting my interest in storytelling and creative writing. Alongside my professional career, I enjoy designing modern websites and exploring digital solutions that combine creativity with functionality.</p>
@@ -378,7 +375,7 @@
             </a>
         </div>
 
-        <!-- 1. My Digital Visiting Card (Section Modified to Full Width Center Layout) -->
+        <!-- 1. My Digital Visiting Card -->
         <div class="full-width-section">
             <section id="visiting-card">
                 <h2>My Digital Visiting Card</h2>
@@ -466,6 +463,11 @@
                         <label>Mobile Number</label>
                         <input type="tel" name="phone" placeholder="Your Phone Number" required>
                     </div>
+                    <!-- NEW: Email Field Included inside Get In Touch Form -->
+                    <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="email" name="email" placeholder="Your Email Address" required>
+                    </div>
                     <div class="form-group">
                         <label>Message</label>
                         <textarea name="message" rows="4" placeholder="Write your message here..." required></textarea>
@@ -552,19 +554,27 @@
             const currentUrl = window.location.href;
             const toast = document.getElementById('shareToast');
 
+            // NEW: Expanded sharing text structure with Name, Email, Instagram, and YouTube details
+            const shareText = `Name: Avnish Kumar (Author & Entrepreneur)\n` +
+                              `Email ID: avnishahirwar@zohomail.in\n` +
+                              `Instagram Profile: https://www.instagram.com/avnish_ahirwar\n` +
+                              `YouTube Channel: https://youtube.com/@avnishahirwar415\n\n` +
+                              `Check out my official profile and smart tools here:`;
+
             if (navigator.share) {
                 navigator.share({
                     title: 'Avnish Kumar - Digital Visiting Card',
-                    text: 'Connect with Avnish Kumar (Author & Entrepreneur). Check profile and smart tools here:',
+                    text: shareText,
                     url: currentUrl
                 })
                 .then(() => console.log('Successful share'))
                 .catch((error) => {
                     console.log('Error sharing:', error);
-                    copyToClipboardFallback(currentUrl, toast);
+                    // Copy full payload text if share sheet gets dismissed/fails
+                    copyToClipboardFallback(shareText + " " + currentUrl, toast);
                 });
             } else {
-                copyToClipboardFallback(currentUrl, toast);
+                copyToClipboardFallback(shareText + " " + currentUrl, toast);
             }
         }
 
@@ -591,13 +601,13 @@
                 document.execCommand('copy');
                 showToastNotification(toastElement);
             } catch (err) {
-                alert("Please manually copy the link: " + text);
+                alert("Please manually copy details:\n\n" + text);
             }
             document.body.removeChild(textArea);
         }
 
         function showToastNotification(element) {
-            element.innerText = "Link Copied to Clipboard!";
+            element.innerText = "Details Copied to Clipboard!";
             element.style.display = 'block';
             setTimeout(() => {
                 element.style.display = 'none';
