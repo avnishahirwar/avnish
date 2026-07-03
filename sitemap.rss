@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Avnish Kumar | Official Portfolio Update Feed</title>
+    <link>https://avnishahirwar.github.io/avnish/</link>
+    <description>Latest links, utilities tools, and author profile updates for Avnish Kumar.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://avnishahirwar.github.io/avnish/sitemap.rss" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Avnish Kumar Official Luxury Portfolio Home</title>
+      <link>https://avnishahirwar.github.io/avnish/</link>
+      <description>Explore the digital hub of Avnish Kumar featuring Flight 143, developer modules, and corporate contact forms.</description>
+      <guid isPermaLink="true">https://avnishahirwar.github.io/avnish/</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0530</pubDate>
+    </item>
+  </channel>
+</rss>
+
