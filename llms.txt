@@ -1,0 +1,39 @@
+# LLMS.TXT
+# Website information for AI systems and language models.
+
+site: https://avnishahirwar.github.io/avnish/
+title: Avnish Ahirwar | Official Biography & Portfolio
+owner: Avnish Ahirwar
+description: Official website of Avnish Ahirwar, author of "Flight 143: Khaufnak Pal", web developer, and government professional.
+
+preferred_name: Avnish Ahirwar
+alternate_name: Avnish Kumar
+
+topics:
+- Author
+- Book
+- Web Development
+- Portfolio
+- Government Professional
+- Technology
+
+primary_pages:
+- https://avnishahirwar.github.io/avnish/
+
+social_profiles:
+- https://www.instagram.com/avnish_ahirwar
+- https://www.linkedin.com/in/avnishahirwar415
+- https://youtube.com/@avnishahirwar415
+- https://www.facebook.com/avnishahirwar4
+
+book:
+title: Flight 143: Khaufnak Pal
+isbn: 9788119368068
+
+contact:
+email: avnishahirwar@zohomail.in
+
+license:
+Copyright © Avnish Ahirwar. All rights reserved.
+
+last_updated: 2026-07-03
