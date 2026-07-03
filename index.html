@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avnish Kumar | Official Luxury Portfolio & Author Website</title>
-    <meta name="description" content="Official website of Avnish Kumar (Avnish Ahirwar). Author of 'Flight 143: Khaufnak Pal', entrepreneur, and digital creator.">
+    
+    <!-- ⭐ PREMIUM SEO & META TAGS -->
+    <title>Avnish Kumar | Official Portfolio, Author & Entrepreneur</title>
+    <meta name="description" content="Official luxury portfolio of Avnish Kumar (Avnish Ahirwar). Author of 'Flight 143: Khaufnak Pal', Web Developer, and Government Professional based in Bhopal. Explore smart tools, buy bestselling books, and book a meeting instantly.">
+    <meta name="keywords" content="Avnish Kumar, Avnish Ahirwar, Flight 143 Khaufnak Pal, Avnish Author, Avnish Developer, Bhopal Government Professional, Digital Visiting Card">
     <meta name="author" content="Avnish Kumar">
+    <link rel="canonical" href="https://avnishahirwar.github.io/avnish/">
+    
+    <!-- robots.txt & Sitemap Simulation Reference -->
+    <!-- sitemap.xml path: https://avnishahirwar.github.io/avnish/sitemap.xml -->
+    <!-- robots.txt path: https://avnishahirwar.github.io/avnish/robots.txt -->
+
+    <!-- Favicon & Web Manifest -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=32&h=32&fit=crop">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=16&h=16&fit=crop">
+    <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkF2bmlzaCBLdW1hciIsCiAgInNob3J0X25hbWUiOiAiQXZuaXNoIiwKICAic3RhcnRfdXJsIjogIi9hdm5pc2gvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMEIwQjBFIiwKICAidGhlbWVfY29sb3IiOiAiI0Q0QUYzNyIKfQ==">
+
+    <!-- Open Graph / Facebook / WhatsApp Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://avnishahirwar.github.io/avnish/">
+    <meta property="og:title" content="Avnish Kumar | Official Portfolio & Author Website">
+    <meta property="og:description" content="Connect with Avnish Kumar (Author, Developer & Entrepreneur). View digital visiting card, smart tools, and legal updates.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200&h=630&fit=crop">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://avnishahirwar.github.io/avnish/">
+    <meta name="twitter:title" content="Avnish Kumar | Official Portfolio & Author Website">
+    <meta name="twitter:description" content="Connect with Avnish Kumar (Author, Developer & Entrepreneur). View digital visiting card, smart tools, and legal updates.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200&h=630&fit=crop">
+
+    <!-- 👤 SCHEMA MARKUP (Structured Data - Person) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Avnish Kumar",
+      "alternateName": "Avnish Ahirwar",
+      "url": "https://avnishahirwar.github.io/avnish/",
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&fit=crop",
+      "jobTitle": "Author & Government Professional & Web Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Chief Minister's Office, Government of Madhya Pradesh"
+      },
+      "description": "Author of Flight 143: Khaufnak Pal, entrepreneur, and digital creator working at CMO Madhya Pradesh.",
+      "sameAs": [
+        "https://www.instagram.com/avnish_ahirwar",
+        "https://www.linkedin.com/in/avnishahirwar415",
+        "https://youtube.com/@avnishahirwar415",
+        "https://www.facebook.com/avnishahirwar4"
+      ]
+    }
+    </script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -36,13 +87,31 @@
             background-color: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.6;
-            padding-top: 70px;
+            padding-top: 75px;
         }
 
-        /* Fixed Sticky Navigation Bar */
-        .sticky-navbar {
+        /* 📈 Scroll Progress Bar Indicator */
+        .progress-container {
             position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: transparent;
+            z-index: 10000;
+        }
+
+        .progress-bar {
+            height: 5px;
+            background: var(--gold-gradient);
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Sticky Navigation Bar */
+        .sticky-navbar {
+            position: fixed;
+            top: 5px;
             left: 0;
             width: 100%;
             background: rgba(11, 11, 14, 0.95);
@@ -90,7 +159,7 @@
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 0;
+            padding: 20px 0 40px 0;
         }
 
         h1, h2, h3 {
@@ -123,14 +192,101 @@
             border: 1px solid rgba(212, 175, 55, 0.1);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            scroll-margin-top: 90px;
+            scroll-margin-top: 100px;
+        }
+
+        /* ✨ HERO SECTION STYLES */
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: radial-gradient(circle at center, #1c1c2b 0%, #0b0b0e 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        .hero-profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-gold);
+            margin: 0 auto 20px auto;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-name {
+            font-size: 32pt;
+            color: #fff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-size: 13pt;
+            color: var(--primary-gold);
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .hero-btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .hero-primary-btn {
+            background: var(--gold-gradient);
+            color: black;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 10pt;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .hero-secondary-btn {
+            background: transparent;
+            color: var(--primary-gold);
+            border: 2px solid var(--primary-gold);
+            padding: 12px 33px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 10pt;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-secondary-btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-3px);
         }
 
         .intro-text-wrapper {
             max-width: 850px;
-            margin: 0 auto 50px auto;
+            margin: 30px auto 0 auto;
             text-align: center;
-            padding: 0 10px;
         }
 
         .intro-text-wrapper p {
@@ -142,33 +298,12 @@
             line-height: 1.8;
         }
 
-        .intro-panel-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--gold-gradient);
-            color: black;
-            padding: 12px 35px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            margin-top: 15px;
-            text-transform: uppercase;
-            font-size: 10pt;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-        }
-
-        .intro-panel-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-        }
-
         .full-width-section {
             max-width: 650px;
             margin: 0 auto 40px auto;
         }
 
+        /* 📇 DIGITAL VISITING CARD & ACTION BUTTONS */
         .vcard {
             background: linear-gradient(135deg, rgba(22,22,31,1) 0%, rgba(35,35,49,1) 100%);
             border-radius: 15px;
@@ -230,8 +365,43 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
+            text-transform: uppercase;
         }
         .share-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); }
+
+        /* VCard Quick Actions Layout Grid */
+        .vcard-actions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .action-card-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 9.5pt;
+            font-weight: 600;
+            transition: 0.3s;
+            color: #fff;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-save-contact { background: #2E7D32; } /* Green */
+        .btn-insta-dm { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border: none; } 
+        .btn-whatsapp-chat { background: #075E54; }
+        .btn-call-direct { background: #1565C0; }
+
+        .action-card-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+            filter: brightness(1.1);
+        }
 
         /* Photo Gallery */
         .photo-grid {
@@ -343,36 +513,105 @@
             border-radius: 30px; font-size: 11pt; font-weight: 600; display: none;
             z-index: 10000; box-shadow: 0 5px 20px rgba(0,0,0,0.4);
         }
+
+        /* 🏛️ MODERN DESIGN FOOTER STYLES */
+        .luxury-footer {
+            background: #07070a;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            color: var(--primary-gold);
+            font-size: 18pt;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .footer-link-item {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 10pt;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .footer-link-item:hover {
+            color: var(--primary-gold);
+            text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+        }
+
+        .footer-divider {
+            max-width: 400px;
+            height: 1px;
+            background: rgba(212, 175, 55, 0.15);
+            margin: 0 auto 20px auto;
+        }
+
+        .copyright-text {
+            color: #666;
+            font-size: 9pt;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
 
+    <!-- 📈 Scroll Progress Bar Indicator -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
     <!-- Sticky Header Menu Bar -->
     <nav class="sticky-navbar">
         <div class="nav-container">
-            <a href="#visiting-card" class="nav-link">My Digital Visiting Card</a>
-            <a href="#gallery" class="nav-link">Photo Gallery</a>
-            <a href="#connect-newsletter" class="nav-link">Connect & Subscribe</a>
+            <a href="#hero-intro" class="nav-link">Home</a>
+            <a href="#visiting-card" class="nav-link">Digital Card</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#connect-newsletter" class="nav-link">Subscribe</a>
             <a href="#contact-form" class="nav-link">Get In Touch</a>
-            <a href="#book-store" class="nav-link">My Bestselling Book</a>
-            <a href="#tools" class="nav-link">Smart Utilities Tools</a>
-            <a href="#google-reviews" class="nav-link">Customer Reviews</a>
+            <a href="#book-store" class="nav-link">Bestselling Book</a>
+            <a href="#tools" class="nav-link">Smart Tools</a>
+            <a href="#google-reviews" class="nav-link">Reviews</a>
         </div>
     </nav>
 
     <div class="container">
 
-        <!-- Introduction Text Section -->
-        <div class="intro-text-wrapper">
-            <p>My name is Avnish Ahirwar. I am an author, working professional, and web developer with a passion for innovation, technology, and continuous learning.</p>
-            <p>I am the author of the book Flight 143: Khaufnak Pal, reflecting my interest in storytelling and creative writing. Alongside my professional career, I enjoy designing modern websites and exploring digital solutions that combine creativity with functionality.</p>
-            <p>Currently, I am based in Bhopal, Madhya Pradesh, and serve at the Chief Minister's Office, Government of Madhya Pradesh. My primary responsibility is managing the online registration and application processing under the Chief Minister's Voluntary Grant Scheme, ensuring efficient and accurate service delivery.</p>
-            <p>Beyond my professional life, I have a strong passion for traveling, discovering new destinations, and experiencing royal heritage, luxury lifestyles, and premium architecture. I believe that exploring different cultures and environments broadens perspective and inspires growth.</p>
-            <p>My long-term vision is to become a successful entrepreneur by building my own company into a high-growth enterprise with a multi-crore turnover. I am committed to continuous self-improvement, leadership, innovation, and creating meaningful value through business and technology.</p>
+        <!-- ✨ PREMIUM HERO SECTION -->
+        <div class="hero-section" id="hero-intro">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80" alt="Avnish Kumar Profile Photo" class="hero-profile-img">
+            <h1 class="hero-name">Avnish Kumar</h1>
+            <p class="hero-tagline">Author | Web Developer | Government Professional</p>
             
-            <a href="https://share.google/TpNKOjaFZUmWsGOFG" target="_blank" class="intro-panel-btn">
-                <i class="fab fa-google"></i> Google Knowledge Panel
-            </a>
+            <div class="hero-btn-container">
+                <a href="https://avnishtrends.setmore.com/?source=instagram" target="_blank" class="hero-primary-btn">
+                    <i class="fas fa-calendar-check"></i> Book a Meeting
+                </a>
+                <a href="https://share.google/TpNKOjaFZUmWsGOFG" target="_blank" class="hero-secondary-btn">
+                    <i class="fab fa-google"></i> Knowledge Panel
+                </a>
+            </div>
+
+            <!-- Introduction Text Inside Hero Layout -->
+            <div class="intro-text-wrapper">
+                <p>My name is Avnish Ahirwar. I am an author, working professional, and web developer with a passion for innovation, technology, and continuous learning.</p>
+                <p>I am the author of the book Flight 143: Khaufnak Pal, reflecting my interest in storytelling and creative writing. Alongside my professional career, I enjoy designing modern websites and exploring digital solutions that combine creativity with functionality.</p>
+                <p>Currently, I am based in Bhopal, Madhya Pradesh, and serve at the Chief Minister's Office, Government of Madhya Pradesh. My primary responsibility is managing the online registration and application processing under the Chief Minister's Voluntary Grant Scheme, ensuring efficient and accurate service delivery.</p>
+                <p>Beyond my professional life, I have a strong passion for traveling, discovering new destinations, and experiencing royal heritage, luxury lifestyles, and premium architecture. I believe that exploring different cultures and environments broadens perspective and inspires growth.</p>
+                <p>My long-term vision is to become a successful entrepreneur by building my own company into a high-growth enterprise with a multi-crore turnover. I am committed to continuous self-improvement, leadership, innovation, and creating meaningful value through business and technology.</p>
+            </div>
         </div>
 
         <!-- 1. My Digital Visiting Card -->
@@ -386,16 +625,36 @@
                         <p class="vcard-subtitle">Author & Entrepreneur</p>
                     </div>
                     <div class="vcard-body">
+                        <!-- Contact Number Added inside Card with Icon -->
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+919589669893">+91-9589669893</a></p>
                         <p><i class="fas fa-envelope"></i> <a href="mailto:avnishahirwar@zohomail.in">avnishahirwar@zohomail.in</a></p>
                         <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/avnish_ahirwar" target="_blank">@avnish_ahirwar</a></p>
                         <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/avnishahirwar415" target="_blank">avnishahirwar415</a></p>
                         <p><i class="fas fa-map-marker-alt"></i> <a href="https://share.google/dXHiKlZQ5WI2ic75x" target="_blank">Official Office Address</a></p>
                     </div>
+                    
                     <div class="vcard-qr-box">
                         <p>Scan to visit Instagram</p>
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/avnish_ahirwar" alt="Instagram QR" class="vcard-qr-img">
                     </div>
-                    <button class="share-btn" onclick="shareVisitingCard()"><i class="fas fa-share-alt"></i> Share Card</button>
+
+                    <button class="share-btn" onclick="shareVisitingCard()"><i class="fas fa-share-alt"></i> Share Card Details</button>
+                    
+                    <!-- 🛠️ CARD QUICK ACTIONS GRID BLOCK -->
+                    <div class="vcard-actions-grid">
+                        <a href="#" class="action-card-btn btn-save-contact" onclick="downloadVCard(event)">
+                            <i class="fas fa-user-plus"></i> Save Contact
+                        </a>
+                        <a href="https://www.instagram.com/avnish_ahirwar" target="_blank" class="action-card-btn btn-insta-dm">
+                            <i class="fab fa-instagram"></i> DM on Insta
+                        </a>
+                        <a href="https://wa.me/919589669893" target="_blank" class="action-card-btn btn-whatsapp-chat">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:+919589669893" class="action-card-btn btn-call-direct">
+                            <i class="fas fa-phone-alt"></i> Call Now
+                        </a>
+                    </div>
                 </div>
             </section>
         </div>
@@ -431,11 +690,12 @@
             </div>
         </section>
 
-        <!-- 3. Connect With Me & Subscribe Newsletter -->
+        <!-- 3. Connect With Me & Subscribe Newsletter (WhatsApp Included) -->
         <section id="connect-newsletter">
             <h2>Connect & Subscribe</h2>
             <div class="connect-newsletter-box">
                 <div class="social-icons-container">
+                    <a href="https://wa.me/919589669893" class="social-icon-link" target="_blank" style="background:#075E54;"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.instagram.com/avnish_ahirwar" class="social-icon-link" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/avnishahirwar415" class="social-icon-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://youtube.com/@avnishahirwar415" class="social-icon-link" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -463,7 +723,6 @@
                         <label>Mobile Number</label>
                         <input type="tel" name="phone" placeholder="Your Phone Number" required>
                     </div>
-                    <!-- NEW: Email Field Included inside Get In Touch Form -->
                     <div class="form-group">
                         <label>Email ID</label>
                         <input type="email" name="email" placeholder="Your Email Address" required>
@@ -546,20 +805,47 @@
 
     </div>
 
+    <!-- 🏛️ MODERN DESIGN FOOTER WITH LEGAL LINKS -->
+    <footer class="luxury-footer">
+        <div class="footer-logo">AVNISH KUMAR</div>
+        <div class="footer-links-grid">
+            <a href="#hero-intro" class="footer-link-item">Home</a>
+            <a href="#visiting-card" class="footer-link-item">Digital Card</a>
+            <a href="#" class="footer-link-item" onclick="alert('Privacy Policy Block Summary: We protect your data and do not share it with third parties.')">Privacy Policy</a>
+            <a href="#" class="footer-link-item" onclick="alert('Terms of Service Summary: Use of this portal implies acceptance of digital utilities guidelines.')">Terms of Service</a>
+            <a href="#" class="footer-link-item" onclick="alert('Sitemap.xml Path: https://avnishahirwar.github.io/avnish/sitemap.xml')">Sitemap</a>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="copyright-text">
+            &copy; 2026 Avnish Kumar Portal. All Rights Reserved. Crafted with Premium Aesthetics.
+        </div>
+    </footer>
+
     <!-- UI Toast Message Popup Element -->
-    <div class="toast" id="shareToast">Link Copied to Clipboard!</div>
+    <div class="toast" id="shareToast">Details Copied to Clipboard!</div>
 
     <script>
+        // 📈 Scroll Progress Bar Control Function
+        window.onscroll = function() { handleScrollProgressBar() };
+
+        function handleScrollProgressBar() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
+        // 📲 Share Visiting Card Functionality
         function shareVisitingCard() {
             const currentUrl = window.location.href;
             const toast = document.getElementById('shareToast');
 
-            // NEW: Expanded sharing text structure with Name, Email, Instagram, and YouTube details
             const shareText = `Name: Avnish Kumar (Author & Entrepreneur)\n` +
+                              `Contact Number: +919589669893\n` +
                               `Email ID: avnishahirwar@zohomail.in\n` +
                               `Instagram Profile: https://www.instagram.com/avnish_ahirwar\n` +
                               `YouTube Channel: https://youtube.com/@avnishahirwar415\n\n` +
-                              `Check out my official profile and smart tools here:`;
+                              `Check profile and smart tools here:`;
 
             if (navigator.share) {
                 navigator.share({
@@ -570,7 +856,6 @@
                 .then(() => console.log('Successful share'))
                 .catch((error) => {
                     console.log('Error sharing:', error);
-                    // Copy full payload text if share sheet gets dismissed/fails
                     copyToClipboardFallback(shareText + " " + currentUrl, toast);
                 });
             } else {
@@ -607,11 +892,31 @@
         }
 
         function showToastNotification(element) {
-            element.innerText = "Details Copied to Clipboard!";
             element.style.display = 'block';
             setTimeout(() => {
                 element.style.display = 'none';
             }, 2500);
+        }
+
+        // 📇 Dynamically Generate & Download vCard File (.vcf)
+        function downloadVCard(event) {
+            event.preventDefault();
+            const vcardData = "BEGIN:VCARD\r\n" +
+                              "VERSION:3.0\r\n" +
+                              "FN:Avnish Kumar\r\n" +
+                              "ORG:Author & Entrepreneur;\r\n" +
+                              "TEL;TYPE=CELL,VOICE:+919589669893\r\n" +
+                              "EMAIL;TYPE=PREF,INTERNET:avnishahirwar@zohomail.in\r\n" +
+                              "URL:https://avnishahirwar.github.io/avnish/\r\n" +
+                              "END:VCARD";
+            
+            const blob = new Blob([vcardData], { type: "text/vcard;charset=utf-8" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "Avnish_Kumar.vcf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         function updateFileName(inputId, labelId) {
