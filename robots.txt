@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemaps Links for Search Engines
+Sitemap: https://avnishahirwar.github.io/avnish/sitemap.xml
+Sitemap: https://avnishahirwar.github.io/avnish/sitemap.rss
